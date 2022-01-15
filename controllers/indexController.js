@@ -10,6 +10,17 @@ const indexView = async (req, res, next) => {
         
       }
 };
+const productDetailsa = async (req, res, next) => {
+  try{
+      res.render("product_details1", { title: "Drone App" });
+    }catch (err) {
+      err.type = 'render'
+      logger.error(err);
+      next(err);
+      
+    }
+};
+
 
 const djiMavic = async (req, res, next) => {
   try{
