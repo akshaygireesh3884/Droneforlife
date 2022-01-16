@@ -36,7 +36,7 @@ const productDetailsa = async (req, res, next) => {
 
 const djiMavic = async (req, res, next) => {
   try{
-      res.render("products/mavic3", { title: "Drone App" });
+      res.render("products/dji/mavic3", { title: "Drone App" });
     }catch (err) {
       err.type = 'render'
       logger.error(err);
