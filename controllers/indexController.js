@@ -10,6 +10,18 @@ const indexView = async (req, res, next) => {
         
       }
 };
+
+const matrice = async (req, res, next) => {
+  try{
+      res.render("products/dji/matrice300", { title: "Drone App" });
+    }catch (err) {
+      err.type = 'render'
+      logger.error(err);
+      next(err);
+      
+    }
+};
+
 const productDetailsa = async (req, res, next) => {
   try{
       res.render("product_details1", { title: "Drone App" });
@@ -185,5 +197,10 @@ const compair = async (req, res, next) => {
 
 
 module.exports = {
-    indexView: indexView,djiMavic:djiMavic,productDetails:productDetails,productSummery:productSummery,products:products,register:register,specialOffer:specialOffer,tac:tac,normal:normal,loginUser:loginUser,legalNotice:legalNotice,forgetPass:forgetPass,faq:faq,error:error,contact:contact,components:components,compair:compair
+    indexView: indexView,matrice:matrice,
+    djiMavic:djiMavic,
+    productDetails:productDetails,
+    productSummery:productSummery,
+    products:products,
+    register:register,specialOffer:specialOffer,tac:tac,normal:normal,loginUser:loginUser,legalNotice:legalNotice,forgetPass:forgetPass,faq:faq,error:error,contact:contact,components:components,compair:compair
 };
