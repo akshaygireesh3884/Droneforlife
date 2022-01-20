@@ -22,6 +22,17 @@ const matrice = async (req, res, next) => {
     }
 };
 
+const phantomrtk = async (req, res, next) => {
+  try{
+      res.render("products/dji/phantom4rtk", { title: "Drone App" });
+    }catch (err) {
+      err.type = 'render'
+      logger.error(err);
+      next(err);
+      
+    }
+};
+
 const productDetailsa = async (req, res, next) => {
   try{
       res.render("product_details1", { title: "Drone App" });
@@ -202,5 +213,6 @@ module.exports = {
     productDetails:productDetails,
     productSummery:productSummery,
     products:products,
+    phantomrtk:phantomrtk,
     register:register,specialOffer:specialOffer,tac:tac,normal:normal,loginUser:loginUser,legalNotice:legalNotice,forgetPass:forgetPass,faq:faq,error:error,contact:contact,components:components,compair:compair
 };
