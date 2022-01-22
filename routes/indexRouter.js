@@ -1,6 +1,6 @@
 const express = require("express");
 const router = express.Router();
-const {indexView,compair,tac,specialOffer, productDetails, contact, normal, register, products, legalNotice,loginUser,djiMavic,matrice,phantomrtk } = require("../controllers/indexController")
+const {saveUserData,indexView,compair,tac,specialOffer, productDetails, contact, normal, register, products, legalNotice,loginUser,djiMavic,matrice,phantomrtk } = require("../controllers/indexController")
 
 
 router.get("/", indexView);
@@ -18,6 +18,10 @@ router.get("/normal", normal);
 router.get("/register", register);
 router.get("/products", products);
 router.get("/login", loginUser);
+
+
+router.post("/api/v1/contact", saveUserData);
+
 
 
 
