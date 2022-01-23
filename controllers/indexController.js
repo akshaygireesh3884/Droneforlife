@@ -1,7 +1,7 @@
 const logger = require("../utils/winston");
 const fs = require('fs');
 const console = require("console");
-
+import axios from "axios";
 const indexView = async (req, res, next) => {
   try {
     res.render("index", { title: "Drone App" });
@@ -210,23 +210,34 @@ const compair = async (req, res, next) => {
 
 const saveUserData = async (req, res, next) => {
   try {
-    fs.readFile('./mockdata/list.json', 'utf8', function (err, data) {
-      if (err) {
-        console.log(err)
-      } else {
-        const file = JSON.parse(data);
-        file.users.push({ "name": req.body.name, "email": req.body.email, "phone": req.body.number, "subject": req.body.subject });
-        const json = JSON.stringify(file);
-        fs.writeFile('./mockdata/list.json', json, 'utf8', function (err) {
-          if (err) {
-            console.log(err);
-          } else {
-            //Everything went OK!
-          }
-        });
-      }
 
-    });
+    axios.post("https://akshaygireesh3884.github.io/Droneforlife/mockdata/list.json", {
+      name: req.body.name,
+      email: req.body.email,
+      number: req.body.number,
+      subject: req.body.subject,
+  }).then(res => {
+      console.log(res);
+  }).catch(err => {
+      console.log(err);
+  })
+    // fs.readFile('./mockdata/list.json', 'utf8', function (err, data) {
+    //   if (err) {
+    //     console.log(err)
+    //   } else {
+    //     const file = JSON.parse(data);
+    //     file.users.push({ "name": req.body.name, "email": req.body.email, "phone": req.body.number, "subject": req.body.subject });
+    //     const json = JSON.stringify(file);
+    //     fs.writeFile('./mockdata/list.json', json, 'utf8', function (err) {
+    //       if (err) {
+    //         console.log(err);
+    //       } else {
+    //         //Everything went OK!
+    //       }
+    //     });
+    //   }
+
+    // });
     res.status(200).json("success");
   } catch (err) {
     err.type = 'failed to save'
