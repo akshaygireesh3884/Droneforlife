@@ -1,6 +1,6 @@
 const logger = require("../utils/winston");
 const fs = require('fs');
-const console = require("console");
+const axios = require("axios");
 const indexView = async (req, res, next) => {
   try {
     res.render("index", { title: "Drone App" });
