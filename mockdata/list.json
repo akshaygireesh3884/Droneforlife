@@ -1,3 +1,17 @@
-[
-
+[{
+        "id": 1,
+        "product_id": "djiair2s",
+        "name": "DJI Air 2S",
+        "samllDec": "One billion colors captured by the 10-bit Dlog-M color profile of DJI Air 2S let you fully immerse yourself in all the hues of your environment",
+        "price": "74926.55",
+        "stock": "3"
+    },
+    {
+        "id": 2,
+        "product_id": "mavic",
+        "name": "DJI Air 2S",
+        "samllDec": "One billion colors captured by the 10-bit Dlog-M color profile of DJI Air 2S let you fully immerse yourself in all the hues of your environment",
+        "price": "74926.55",
+        "stock": "3"
+    }
 ]

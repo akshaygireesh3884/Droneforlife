@@ -1,6 +1,38 @@
 const logger = require("../utils/winston");
 const fs = require('fs');
 const axios = require("axios");
+
+
+const getProductDetails = async (req, res, next) => {
+  try {
+    const productId = req.path.split('/')[3];
+     fs.readFile('./mockdata/list.json', 'utf8', function (err, data) {
+      if (err) {
+        console.log(err)
+      } else {
+        const file = JSON.parse(data);
+        var x = file.find(x => x.product_id === productId);
+        console.log("asfdg",x);
+        // const json = JSON.stringify(file);
+        // fs.writeFile('./mockdata/list.json', json, 'utf8', function (err) {
+        //   if (err) {
+        //     console.log(err);
+        //   } else {
+        //     //Everything went OK!
+        //   }
+        // });
+    res.status(200).json(x);
+      }
+
+    });
+  } catch (err) {
+    err.type = 'render'
+    logger.error(err);
+    next(err);
+
+  }
+};
+
 const indexView = async (req, res, next) => {
   try {
     res.render("index", { title: "Drone App" });
@@ -34,26 +66,17 @@ const phantomrtk = async (req, res, next) => {
   }
 };
 
-const productDetailsa = async (req, res, next) => {
-  try {
-    res.render("product_details1", { title: "Drone App" });
-  } catch (err) {
-    err.type = 'render'
-    logger.error(err);
-    next(err);
 
-  }
-};
 
 
 const djiMavic = async (req, res, next) => {
   try {
+    console.log("djiMavic");
     res.render("products/dji/mavic3", { title: "Drone App" });
   } catch (err) {
     err.type = 'render'
     logger.error(err);
     next(err);
-
   }
 };
 const productDetails = async (req, res, next) => {
@@ -206,7 +229,16 @@ const compair = async (req, res, next) => {
 
   }
 };
+const productRender = async (req, res, next) => {
+  try {
+    res.render("product_details", { title: "Drone App" });
+  } catch (err) {
+    err.type = 'render'
+    logger.error(err);
+    next(err);
 
+  }
+};
 const saveUserData = async (req, res, next) => {
   try {
 
@@ -220,23 +252,7 @@ const saveUserData = async (req, res, next) => {
     }).catch(err => {
       console.log(err);
     })
-    // fs.readFile('./mockdata/list.json', 'utf8', function (err, data) {
-    //   if (err) {
-    //     console.log(err)
-    //   } else {
-    //     const file = JSON.parse(data);
-    //     file.users.push({ "name": req.body.name, "email": req.body.email, "phone": req.body.number, "subject": req.body.subject });
-    //     const json = JSON.stringify(file);
-    //     fs.writeFile('./mockdata/list.json', json, 'utf8', function (err) {
-    //       if (err) {
-    //         console.log(err);
-    //       } else {
-    //         //Everything went OK!
-    //       }
-    //     });
-    //   }
-
-    // });
+   
     res.status(200).json("success");
   } catch (err) {
     err.type = 'failed to save'
@@ -246,7 +262,8 @@ const saveUserData = async (req, res, next) => {
 };
 
 
-module.exports = {
+module.exports = {getProductDetails:getProductDetails,
+  productRender:productRender,
   saveUserData: saveUserData,
   indexView: indexView, matrice: matrice,
   djiMavic: djiMavic,
