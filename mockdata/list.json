@@ -9,9 +9,28 @@
     {
         "id": 2,
         "product_id": "mavic",
-        "name": "DJI Air 2S",
-        "samllDec": "One billion colors captured by the 10-bit Dlog-M color profile of DJI Air 2S let you fully immerse yourself in all the hues of your environment",
-        "price": "74926.55",
-        "stock": "3"
+        "name": "DJI Mavic Mini 2",
+        "samllDec": "- Ultralight Foldable Drone, 3-Axis Gimbal with 4K Camera, 12MP Photos, 31 Mins Flight Time, OcuSync 2.0 10km HD Video Transmission, QuickShots, Gray",
+        "price": "₹222.00",
+        "stock": "100 items in stock",
+        "fullSDec": " DJI Mini 2 is beginner-friendly, powerful, and well, mini. Impressive performance, stunning image quality, and creative videos are just a few taps away. Explore an entirely new perspective, capturing the moments that make your life truly yours. INTELLIGENT MODES: Panorama Select from Wide - Angle, 180 degree,  and Sphere panoramas,   and DJI Mini 2 will do the rest,   generating a panoramic masterpiece almost instantly.Enhanced Photo The DJI Fly app features intelligent,        built - in photo optimization.The app automatically enhances image quality after downloading a photo,resulting in vivid colors and details that pop.DIRECT DOWNLOAD AND INSTANT EDITING: QuickTransfer When Mini 2 is close to your smartphone, the DJI Fly app will automatically recognize and connect to the aircraft and synchronize selected photos and videos at 20 MB / s.Trimmed Download With this new feature, you can easily cut out a segment of your footage to edit and download.Looking for the perfect shot or worrying about insufficient storage is a thing of the past.Imaginative Templates The intuitive editor of the DJI Fly app includes a diverseset of creative templates. Flying, shooting,editing,       and sharing can be done almost instantly,allowing you to create and share on the go ",
+        "body": [{
+            "Brand ": "IZI",
+            "Model": "DJI Mavic Mini 2",
+            "Manufacturer": "DJI",
+            "Dimensions": "‎25.3 x 19.3 x 13.4 cm; 249 Grams",
+            "Optical Sensor Resolution:": "12MP",
+            "Video Capture Resolution": "4K",
+            "Battery Capacity": "1100 Milliamp Hours"
+        }],
+        "feature_dec": " DJI Mini 2 is beginner-friendly, powerful, and well, mini. Impressive performance, stunning image quality, and creative videos are just a few taps away. Explore an entirely new perspective, capturing the moments that make your life truly yours. INTELLIGENT MODES: Panorama Select from Wide - Angle,  180°,   and Sphere panoramas,and DJI Mini 2 will do the rest,  generating a panoramic masterpiece almost instantly.Enhanced Photo The DJI Fly app features intelligent,  built - in  photo optimization.The app automatically enhances image quality after downloading a photo,  resulting in vivid colors and details that pop.DIRECT DOWNLOAD AND INSTANT EDITING: QuickTransfer When Mini 2 is close  to your smartphone,   the DJI Fly app will automatically recognize and connect to the aircraft and synchronize selected photos and videos at 20 MB / s.Trimmed Download With this new feature,   you can easily cut out   a segment of your footage to edit and download.Looking     for the perfect shot or worrying about insufficient storage is a thing of the past.Imaginative Templates The intuitive editor of the DJI Fly app includes     a diverseset of creative templates.Flying, shooting,  editing,and sharing can be done almost instantly,  allowing you to create and share on the go ",
+        "featuredec_1": "Editorial Reviews",
+        "featuredec_2": "QUICKSHOTS",
+        "featuredec_3": "with just a few taps, dji mini 2 automatically records and shoots professional-level videos to share directly on social media. whether you’re a beginner or a more experienced flyer, the dji fly app helps you produce impressive results complete with soundtracks and filters. ",
+        "featuredec_4": "3-AXIS GIMBAL WITH 4K CAMERA",
+        "featuredec_5": "  The S2950 sports an impressive 28mm – 504mm* high precision Fujinon optical zoom lens. Simple to operate with an electric powered zoom lever, the huge zoom range means that you can capture all the detail, even when you're at a considerable distance away. You can even operate the zoom during video shooting.Unlike a bulky D - SLR, bridge cameras allow you great versatility of zoom, without the hassle of carrying a bag of lenses. ",
+        "featuredec_6": "Impressive panoramas",
+        "featuredec_7": "  a 12 mp camera in the sky delivers content guaranteed to impress.along with 4 k / 30 fps video and a 3 - axis motorized gimbal, mini 2 ensures stunning image quality that is consistently smooth no matter how adventurous your piloting gets."
+
     }
 ]

@@ -121,13 +121,13 @@
                     <form class="form-inline navbar-search" method="post" action="products">
                         <input id="srchFld" class="srchTxt" type="text" />
                         <select class="srchTxt">
-							<option>All</option>
-							<option>CLOTHES </option>
-							<option>FOOD AND BEVERAGES </option>
-							<option>HEALTH & BEAUTY </option>
-							<option>SPORTS & LEISURE </option>
-							<option>BOOKS & ENTERTAINMENTS </option>
-						</select>
+                            <option>All</option>
+                            <option>CLOTHES </option>
+                            <option>FOOD AND BEVERAGES </option>
+                            <option>HEALTH & BEAUTY </option>
+                            <option>SPORTS & LEISURE </option>
+                            <option>BOOKS & ENTERTAINMENTS </option>
+                        </select>
                         <button type="submit" id="submitButton" class="btn btn-primary">Go</button>
                     </form>
                     <ul id="topMenu" class="nav pull-right">
@@ -137,7 +137,7 @@
                         <li class=""><a href="contact">Contact</a></li>
                         <li class="">
                             <a href="#login" role="button" data-toggle="modal" style="padding-right:0"><span
-									class="btn btn-large btn-success">Login</span></a>
+                                    class="btn btn-large btn-success">Login</span></a>
                             <div id="login" class="modal hide fade in" tabindex="-1" role="dialog" aria-labelledby="login" aria-hidden="false">
                                 <div class="modal-header">
                                     <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
@@ -153,8 +153,8 @@
                                         </div>
                                         <div class="control-group">
                                             <label class="checkbox">
-												<input type="checkbox"> Remember me
-											</label>
+                                                <input type="checkbox"> Remember me
+                                            </label>
                                         </div>
                                     </form>
                                     <button type="submit" class="btn btn-success">Sign in</button>
@@ -181,7 +181,7 @@
                             <a>AGRO DRONES [12]</a>
                             <ul>
                                 <li><a class="active" href="products"><i class="icon-chevron-right"></i>DJI
-										 </a></li>
+                                    </a></li>
                                 <li><a href="products"><i class="icon-chevron-right"></i>Autel Robotics</a></li>
                                 <li><a href="products"><i class="icon-chevron-right"></i>Skydio</a></li>
                                 <li><a href="products"><i class="icon-chevron-right"></i>Aerialtronics</a>
@@ -206,14 +206,14 @@
                             <ul style="display:none">
                                 <li><a href="products"><i class="icon-chevron-right"></i>Angoves (35)</a></li>
                                 <li><a href="products"><i class="icon-chevron-right"></i>Bouchard Aine & Fils
-										(8)</a></li>
+                                        (8)</a></li>
                                 <li><a href="products"><i class="icon-chevron-right"></i>French Rabbit (5)</a></li>
                                 <li><a href="products"><i class="icon-chevron-right"></i>Louis Bernard (45)</a>
                                 </li>
                                 <li><a href="products"><i class="icon-chevron-right"></i>BIB Wine (Bag in Box)
-										(8)</a></li>
+                                        (8)</a></li>
                                 <li><a href="products"><i class="icon-chevron-right"></i>Other Liquors & Wine
-										(5)</a></li>
+                                        (5)</a></li>
                                 <li><a href="products"><i class="icon-chevron-right"></i>Garden (3)</a></li>
                                 <li><a href="products"><i class="icon-chevron-right"></i>Khao Shong (11)</a></li>
                             </ul>
@@ -283,37 +283,27 @@
                             </div>
                         </div>
                         <div class="span6">
-                            <h3>DJI Mavic Mini 2</h3>
-                            <small>- Ultralight Foldable Drone, 3-Axis Gimbal with 4K Camera, 12MP Photos, 31 Mins Flight Time, OcuSync 2.0 10km HD Video Transmission, QuickShots, Gray</small>
+                            <h3 id="product_name">DJI Mavic Mini 2</h3>
+                            <small id="small_dec">- Ultralight Foldable Drone, 3-Axis Gimbal with 4K Camera, 12MP
+                                Photos, 31 Mins Flight Time, OcuSync 2.0 10km HD Video Transmission, QuickShots,
+                                Gray</small>
                             <hr class="soft" />
                             <form class="form-horizontal qtyFrm">
                                 <div class="control-group">
-                                    <label class="control-label"><span>₹222.00</span></label>
+                                    <label class="control-label" id="price"><span>₹222.00</span></label>
                                     <div class="controls">
                                         <input type="number" class="span1" placeholder="Qty." />
                                         <button type="submit" class="btn btn-large btn-primary pull-right"> Add to cart
-											<i class=" icon-shopping-cart"></i></button>
+                                            <i class=" icon-shopping-cart"></i></button>
                                     </div>
                                 </div>
                             </form>
 
                             <hr class="soft" />
-                            <h4>100 items in stock</h4>
-                            <!-- <form class="form-horizontal qtyFrm pull-right">
-                                <div class="control-group">
-                                    <label class="control-label"><span>Color</span></label>
-                                    <div class="controls">
-                                        <select class="span2">
-											<option>Black</option>
-											<option>Red</option>
-											<option>Blue</option>
-											<option>Brown</option>
-										</select>
-                                    </div>
-                                </div>
-                            </form> -->
+                            <h4 id="stock">100 items in stock</h4>
+
                             <hr class="soft clr" />
-                            <p>
+                            <p id="decription_full">
                                 DJI Mini 2 is beginner-friendly, powerful, and well, mini. Impressive performance, stunning image quality, and creative videos are just a few taps away. Explore an entirely new perspective, capturing the moments that make your life truly yours. INTELLIGENT
                                 MODES: Panorama Select from Wide-Angle, 180°, and Sphere panoramas, and DJI Mini 2 will do the rest, generating a panoramic masterpiece almost instantly. Enhanced Photo The DJI Fly app features intelligent, built-in photo
                                 optimization. The app automatically enhances image quality after downloading a photo, resulting in vivid colors and details that pop. DIRECT DOWNLOAD AND INSTANT EDITING: QuickTransfer When Mini 2 is close to your smartphone,
@@ -337,7 +327,7 @@
                                 <div class="tab-pane fade active in" id="home">
                                     <h4>Product Information</h4>
                                     <table class="table table-bordered">
-                                        <tbody>
+                                        <tbody id="t_body">
                                             <tr class="techSpecRow">
                                                 <th colspan="2">Product Details</th>
                                             </tr>
@@ -397,7 +387,7 @@
                                     </table>
 
                                     <h5>Features</h5>
-                                    <p>
+                                    <p id="feature_dec">
                                         DJI Mini 2 is beginner-friendly, powerful, and well, mini. Impressive performance, stunning image quality, and creative videos are just a few taps away. Explore an entirely new perspective, capturing the moments that make your life truly yours. INTELLIGENT
                                         MODES: Panorama Select from Wide-Angle, 180°, and Sphere panoramas, and DJI Mini 2 will do the rest, generating a panoramic masterpiece almost instantly. Enhanced Photo The DJI Fly app features intelligent, built-in
                                         photo optimization. The app automatically enhances image quality after downloading a photo, resulting in vivid colors and details that pop. DIRECT DOWNLOAD AND INSTANT EDITING: QuickTransfer When Mini 2 is close
@@ -406,28 +396,23 @@
                                         a diverse set of creative templates. Flying, shooting, editing, and sharing can be done almost instantly, allowing you to create and share on the go <br />
                                     </p>
 
-                                    <h4>Editorial Reviews</h4>
-                                    <h5>QUICKSHOTS</h5>
-                                    <p>
+                                    <h4 id="featuredec_1">Editorial Reviews</h4>
+                                    <h5 id="featuredec_2">QUICKSHOTS</h5>
+                                    <p id="featuredec_3">
                                         with just a few taps, dji mini 2 automatically records and shoots professional-level videos to share directly on social media. whether you’re a beginner or a more experienced flyer, the dji fly app helps you produce impressive results complete with soundtracks
                                         and filters.
                                     </p>
 
-                                    <h5>3-AXIS GIMBAL WITH 4K CAMERA</h5>
-                                    <p>
+                                    <h5 id="featuredec_4">3-AXIS GIMBAL WITH 4K CAMERA</h5>
+                                    <p id="featuredec_5">
                                         The S2950 sports an impressive 28mm – 504mm* high precision Fujinon optical zoom lens. Simple to operate with an electric powered zoom lever, the huge zoom range means that you can capture all the detail, even when you're at a considerable distance away.
                                         You can even operate the zoom during video shooting. Unlike a bulky D-SLR, bridge cameras allow you great versatility of zoom, without the hassle of carrying a bag of lenses.
                                     </p>
-                                    <h5>Impressive panoramas</h5>
-                                    <p>
+                                    <h5 id="featuredec_6">Impressive panoramas</h5>
+                                    <p id="featuredec_7">
                                         a 12mp camera in the sky delivers content guaranteed to impress. along with 4k/30fps video and a 3-axis motorized gimbal, mini 2 ensures stunning image quality that is consistently smooth no matter how adventurous your piloting gets.
                                     </p>
 
-                                    <h5>POWERFUL PERFORMANCE</h5>
-                                    <p>
-                                        with a max battery life of 31 minutes, dji mini 2 grants more than enough time to compose the perfect shot. mini 2 can resist level 5 winds and take off at a max altitude of 4,000 meters, so your footage is stable even when flying along a windy coastline
-                                        or high above an alpine forest.
-                                    </p>
                                 </div>
                                 <div class="tab-pane fade" id="profile">
                                     <div id="myTab" class="pull-right">
@@ -810,4 +795,4 @@
     })
 </script>
 
-</html>
+</html
