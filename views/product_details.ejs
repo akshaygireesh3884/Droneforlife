@@ -333,55 +333,31 @@
                                             </tr>
                                             <tr class="techSpecRow">
                                                 <td class="techSpecTD1">Brand: </td>
-                                                <td class="techSpecTD2">IZI</td>
+                                                <td class="techSpecTD2" id="brand">IZI</td>
                                             </tr>
                                             <tr class="techSpecRow">
                                                 <td class="techSpecTD1">Model:</td>
-                                                <td class="techSpecTD2">DJI Mavic Mini 2</td>
+                                                <td class="techSpecTD2" id="item_model">DJI Mavic Mini 2</td>
                                             </tr>
                                             <tr class="techSpecRow">
                                                 <td class="techSpecTD1">Manufacturer:</td>
-                                                <td class="techSpecTD2"> DJI</td>
+                                                <td class="techSpecTD2" id="manifacture"> DJI</td>
                                             </tr>
                                             <tr class="techSpecRow">
                                                 <td class="techSpecTD1">Dimensions:</td>
-                                                <td class="techSpecTD2"> ‎25.3 x 19.3 x 13.4 cm; 249 Grams</td>
+                                                <td class="techSpecTD2" id="Dimension"> ‎25.3 x 19.3 x 13.4 cm; 249 Grams</td>
                                             </tr>
                                             <tr class="techSpecRow">
                                                 <td class="techSpecTD1">Optical Sensor Resolution:</td>
-                                                <td class="techSpecTD2">12MP</td>
+                                                <td class="techSpecTD2" id="sensors">12MP</td>
                                             </tr>
                                             <tr class="techSpecRow">
                                                 <td class="techSpecTD1">Video Capture Resolution:</td>
-                                                <td class="techSpecTD2">4K</td>
+                                                <td class="techSpecTD2" id="resolution">4K</td>
                                             </tr>
                                             <tr class="techSpecRow">
                                                 <td class="techSpecTD1">Battery Capacity:</td>
-                                                <td class="techSpecTD2">1100 Milliamp Hours</td>
-                                            </tr>
-                                            <tr class="techSpecRow">
-                                                <td class="techSpecTD1">Connector Type:</td>
-                                                <td class="techSpecTD2">USB</td>
-                                            </tr>
-                                            <tr class="techSpecRow">
-                                                <td class="techSpecTD1">Form Factor:</td>
-                                                <td class="techSpecTD2">Compact</td>
-                                            </tr>
-                                            <tr class="techSpecRow">
-                                                <td class="techSpecTD1">Lens Type:</td>
-                                                <td class="techSpecTD2">Wide-Angle</td>
-                                            </tr>
-                                            <tr class="techSpecRow">
-                                                <td class="techSpecTD1">Item Weight:</td>
-                                                <td class="techSpecTD2">249 g</td>
-                                            </tr>
-                                            <tr class="techSpecRow">
-                                                <td class="techSpecTD1">Remote Control Included:</td>
-                                                <td class="techSpecTD2">YES</td>
-                                            </tr>
-                                            <tr class="techSpecRow">
-                                                <td class="techSpecTD1">Item part number:</td>
-                                                <td class="techSpecTD2">‎DJI-MM2</td>
+                                                <td class="techSpecTD2" id="battery">1100 Milliamp Hours</td>
                                             </tr>
                                         </tbody>
                                     </table>
@@ -790,9 +766,32 @@
     let paramString = window.location.href.split("/")[3];
     axios.get(`/api/v1/${paramString}`).then(res => {
         console.log(res.data);
+        builddata(res.data);
     }).catch(err => {
         console.log(err);
     })
+    const builddata = (data) => {
+        document.getElementById("product_name").innerHTML = data.name;
+        document.getElementById("price").innerHTML = data.price;
+        document.getElementById("stock").innerHTML = data.stock;
+        document.getElementById("small_dec").innerHTML = data.samllDec;
+        document.getElementById("decription_full").innerHTML = data.fullSDec;
+        document.getElementById("brand").innerHTML = data.body[0].Brand;
+        document.getElementById("item_model").innerHTML = data.body[0].Model;
+        document.getElementById("manifacture").innerHTML = data.body[0].Manufacturer;
+        document.getElementById("Dimension").innerHTML = data.body[0].Dimensions;
+        document.getElementById("sensors").innerHTML = data.body[0].Optical;
+        document.getElementById("resolution").innerHTML = data.body[0].Video;
+        document.getElementById("battery").innerHTML = data.body[0].Battery;
+        document.getElementById("feature_dec").innerHTML = data.feature_dec;
+        document.getElementById("featuredec_1").innerHTML = data.featuredec_1;
+        document.getElementById("featuredec_2").innerHTML = data.featuredec_2;
+        document.getElementById("featuredec_3").innerHTML = data.featuredec_3;
+        document.getElementById("featuredec_4").innerHTML = data.featuredec_4;
+        document.getElementById("featuredec_5").innerHTML = data.featuredec_5;
+        document.getElementById("featuredec_6").innerHTML = data.featuredec_6;
+        document.getElementById("featuredec_7").innerHTML = data.featuredec_7;
+    }
 </script>
 
 </html
